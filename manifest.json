@@ -1,0 +1,38 @@
+{
+
+  "manifest_version": 2,
+  "name": "Cookie Cutter",
+  "version": "0.1",
+
+  "description": "Helps manage the lifetime of cookies",
+
+  "icons": {
+    "48": "icons/cutter.png"
+  },
+
+  "permissions": [
+    "<all_urls>", 
+    "cookies",
+    "tabs"
+  ] 
+
+  ,
+  // "content_scripts": [
+  //   {
+  //     "matches": ["<all_urls>"],
+  //     "js": ["cookie_cutter.js"]
+  //   }
+  // ],
+
+  "background": {
+    "scripts": [
+      "cookie_cutter.js"
+    ]
+  },
+
+  "browser_action": {
+    "default_icon": "icons/cutter-32.png",
+    "default_title": "Cookie Cutter",
+    "default_popup": "popup/cookie_cutter.html"
+  }
+}
